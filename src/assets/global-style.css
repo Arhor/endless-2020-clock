@@ -1,0 +1,168 @@
+:root {
+    --blueActive: rgba(140, 225, 255, 1);
+    --blueNotActive: rgba(90, 225, 255, 0.025);
+    --blueBoxShadow: 0px -2px 25px rgba(90, 255, 255, 0.4);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(44, 44, 55);
+}
+
+.number-2 {
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.number-2-small {
+    width: 125px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.number-4 {
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.numbers {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.numbers-small {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40vw;
+    margin: auto;
+}
+
+.colon {
+    font-size: 85pt;
+    color: var(--blueActive);
+}
+
+.digit {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.digit-small {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 50px;
+}
+
+.line {
+    display: block;
+    background-color: var(--blueNotActive);
+}
+
+.line-horizontal {
+    width: 100px;
+    height: 10px;
+}
+
+.line-vertical {
+    width: 10px;
+    height: 100px;
+}
+
+.line-horizontal-small {
+    width: 50px;
+    height: 10px;
+}
+
+.line-vertical-small {
+    width: 10px;
+    height: 50px;
+}
+
+/* Lighting up the correct lines to make the numbers */
+
+.num-0 .line-top,
+.num-0 .line-right-top,
+.num-0 .line-left-top,
+.num-0 .line-right-bottom,
+.num-0 .line-left-bottom,
+.num-0 .line-bottom,
+.num-1 .line-right-top,
+.num-1 .line-right-bottom,
+.num-2 .line-top,
+.num-2 .line-right-top,
+.num-2 .line-middle,
+.num-2 .line-left-bottom,
+.num-2 .line-bottom,
+.num-3 .line-top,
+.num-3 .line-right-top,
+.num-3 .line-middle,
+.num-3 .line-right-bottom,
+.num-3 .line-bottom,
+.num-4 .line-right-top,
+.num-4 .line-middle,
+.num-4 .line-left-top,
+.num-4 .line-right-bottom,
+.num-5 .line-top,
+.num-5 .line-left-top,
+.num-5 .line-middle,
+.num-5 .line-right-bottom,
+.num-5 .line-bottom,
+.num-6 .line-top,
+.num-6 .line-left-top,
+.num-6 .line-middle,
+.num-6 .line-left-bottom,
+.num-6 .line-right-bottom,
+.num-6 .line-bottom,
+.num-7 .line-top,
+.num-7 .line-right-top,
+.num-7 .line-right-bottom,
+.num-8 .line,
+.num-9 .line-top,
+.num-9 .line-left-top,
+.num-9 .line-middle,
+.num-9 .line-right-top,
+.num-9 .line-right-bottom,
+.num-9 .line-bottom {
+    background-color: var(--blueActive);
+    box-shadow: var(--blueBoxShadow);
+}
+
+/* Make 0, 1, 4, and 7 use corners when lighting up too */
+
+.num-0 .line-right-top::after,
+.num-0 .line-left-top::after,
+.num-1 .line-right-bottom::after,
+.num-1 .line-right-top::after,
+.num-4 .line-right-bottom::after,
+.num-4 .line-right-top::after,
+.num-4 .line-left-top::after,
+.num-7 .line-right-bottom::after,
+.num-7 .line-right-top::after {
+    content: '';
+    border-top: 10px solid var(--blueActive);
+    border-bottom: 10px solid var(--blueActive);
+    margin-top: -10px;
+    height: 100%;
+    display: block;
+}
+
+.inactive .line {
+    background-color: var(--blueNotActive);
+    box-shadow: none;
+}
+.inactive .line::after {
+    border-color: transparent;
+}
