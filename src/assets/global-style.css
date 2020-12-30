@@ -16,19 +16,19 @@ body {
 }
 
 .number-2 {
-    width: 250px;
+    width: 63px;
     display: flex;
     justify-content: space-around;
 }
 
 .number-2-small {
-    width: 125px;
+    width: 63px;
     display: flex;
     justify-content: space-around;
 }
 
 .number-4 {
-    width: 500px;
+    width: 125px;
     display: flex;
     justify-content: space-around;
 }
@@ -43,12 +43,13 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 40vw;
+    width: 70vw;
     margin: auto;
+    margin-top: 50px;
 }
 
 .colon {
-    font-size: 85pt;
+    font-size: 30pt;
     color: var(--blueActive);
 }
 
@@ -56,14 +57,14 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 100px;
+    width: 25px;
 }
 
 .digit-small {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 50px;
+    width: 25px;
 }
 
 .line {
@@ -72,23 +73,23 @@ body {
 }
 
 .line-horizontal {
-    width: 100px;
-    height: 10px;
+    width: 25px;
+    height: 5px;
 }
 
 .line-vertical {
-    width: 10px;
-    height: 100px;
+    width: 5px;
+    height: 25px;
 }
 
 .line-horizontal-small {
-    width: 50px;
-    height: 10px;
+    width: 25px;
+    height: 5px;
 }
 
 .line-vertical-small {
-    width: 10px;
-    height: 50px;
+    width: 5px;
+    height: 25px;
 }
 
 /* Lighting up the correct lines to make the numbers */
@@ -152,9 +153,9 @@ body {
 .num-7 .line-right-bottom::after,
 .num-7 .line-right-top::after {
     content: '';
-    border-top: 10px solid var(--blueActive);
-    border-bottom: 10px solid var(--blueActive);
-    margin-top: -10px;
+    border-top: 5px solid var(--blueActive);
+    border-bottom: 5px solid var(--blueActive);
+    margin-top: -5px;
     height: 100%;
     display: block;
 }
@@ -165,4 +166,109 @@ body {
 }
 .inactive .line::after {
     border-color: transparent;
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    .numbers {
+        width: 60vw;
+    }
+    
+    .numbers-small {
+        width: 40vw;
+    }
+}
+
+@media (min-width: 1024px) {
+    .number-2 {
+        width: 250px;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .number-2-small {
+        width: 125px;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .number-4 {
+        width: 500px;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .numbers {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .numbers-small {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 40vw;
+        margin: auto;
+    }
+    
+    .colon {
+        font-size: 85pt;
+        color: var(--blueActive);
+    }
+    
+    .digit {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100px;
+    }
+    
+    .digit-small {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 50px;
+    }
+    
+    .line {
+        display: block;
+        background-color: var(--blueNotActive);
+    }
+    
+    .line-horizontal {
+        width: 100px;
+        height: 10px;
+    }
+    
+    .line-vertical {
+        width: 10px;
+        height: 100px;
+    }
+    
+    .line-horizontal-small {
+        width: 50px;
+        height: 10px;
+    }
+    
+    .line-vertical-small {
+        width: 10px;
+        height: 50px;
+    }
+
+    .num-0 .line-right-top::after,
+    .num-0 .line-left-top::after,
+    .num-1 .line-right-bottom::after,
+    .num-1 .line-right-top::after,
+    .num-4 .line-right-bottom::after,
+    .num-4 .line-right-top::after,
+    .num-4 .line-left-top::after,
+    .num-7 .line-right-bottom::after,
+    .num-7 .line-right-top::after {
+        content: '';
+        border-top: 10px solid var(--blueActive);
+        border-bottom: 10px solid var(--blueActive);
+        margin-top: -10px;
+        height: 100%;
+        display: block;
+    }
 }
